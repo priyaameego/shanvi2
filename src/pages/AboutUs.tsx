@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Target, Eye, Handshake, Award, ShieldCheck, Lightbulb, CheckCircle2, Target as TargetIcon, Database, CheckSquare, Briefcase, Clock, MessageSquare, ChevronRight } from 'lucide-react';
+import { Target, Eye, Handshake, Award, ShieldCheck, Lightbulb, Target as TargetIcon, Database, CheckSquare, Briefcase, Clock, MessageSquare, ChevronRight } from 'lucide-react';
 
 export default function AboutUs() {
   const coreValues = [

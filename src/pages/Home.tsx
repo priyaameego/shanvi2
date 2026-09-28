@@ -1,5 +1,6 @@
 import { motion, useScroll, useTransform, AnimatePresence } from 'framer-motion';
-import { ArrowRight, Briefcase, Building, Users, CheckCircle2, ChevronRight, ChevronDown, Search, Quote, User, Building2 } from 'lucide-react';
+import type { Variants } from 'framer-motion';
+import { Briefcase, Building, Users, CheckCircle2, ChevronRight, Search, User, Building2 } from 'lucide-react';
 import { Link } from '@tanstack/react-router';
 import { useRef, useState, useEffect } from 'react';
 
@@ -41,7 +42,7 @@ export default function Home() {
     { title: "Account Manager for Manufacturing company", desc: "Identified and onboarded a skilled Account Manager with a strong technical background to manage key B2B relationships and drive revenue for a top manufacturing company." }
   ];
 
-  const containerVariants = {
+  const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: { 
       opacity: 1,
@@ -49,13 +50,13 @@ export default function Home() {
     }
   };
 
-  const itemVariants = {
+  const itemVariants: Variants = {
     hidden: { opacity: 0, y: 30, rotateX: 10 },
     visible: { 
       opacity: 1, 
       y: 0, 
       rotateX: 0,
-      transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] } 
+      transition: { duration: 0.8, ease: "easeOut" } 
     }
   };
 
