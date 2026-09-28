@@ -171,7 +171,7 @@ export default function Services() {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 lg:gap-6 mb-16">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-6 mb-16">
             {sectors.map((sector, idx) => (
               <motion.div 
                 key={idx}
@@ -179,10 +179,10 @@ export default function Services() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: idx * 0.05 }}
-                className="flex items-center gap-4 p-6 bg-white border border-primary/10 hover:border-accent hover:shadow-xl transition-all duration-300 group cursor-default"
+                className="flex flex-col md:flex-row items-center justify-center md:justify-start text-center md:text-left gap-3 md:gap-4 p-4 md:p-6 bg-white border border-primary/10 hover:border-accent hover:shadow-xl transition-all duration-300 group cursor-default"
               >
-                <div className="text-accent group-hover:scale-110 transition-transform duration-300">{sector.icon}</div>
-                <span className="font-serif font-bold text-primary group-hover:text-accent transition-colors">{sector.name}</span>
+                <div className="text-accent flex-shrink-0 group-hover:scale-110 transition-transform duration-300">{sector.icon}</div>
+                <span className="font-serif font-bold text-sm md:text-base text-primary group-hover:text-accent transition-colors break-words w-full">{sector.name}</span>
               </motion.div>
             ))}
           </div>

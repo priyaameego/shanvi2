@@ -41,8 +41,9 @@ export default function Contact() {
       </section>
       
       {/* Content */}
-      <section className="py-24 relative z-10">
-        <div className="container mx-auto px-6 lg:px-12">
+      <section className="py-24 lg:py-32 relative z-10">
+        <div className="absolute inset-0 bg-white"></div>
+        <div className="container relative z-10 mx-auto px-6 lg:px-12">
           <div className="flex flex-col lg:flex-row gap-16 lg:gap-24">
             
             {/* Contact Details Side */}
@@ -52,62 +53,91 @@ export default function Contact() {
                 className="space-y-10"
               >
                 <div>
-                  <h3 className="text-3xl font-serif font-bold text-primary mb-8">Reach Out To Us</h3>
-                  <p className="text-dark/70 font-light text-lg mb-12">
+                  <h3 className="text-4xl font-serif font-bold text-primary mb-6">Reach Out To Us</h3>
+                  <div className="w-12 h-1 bg-accent mb-6" />
+                  <p className="text-dark/70 font-light text-lg mb-12 leading-relaxed">
                     We are always available to discuss your recruitment needs or career aspirations. Connect with us through any of the channels below.
                   </p>
                 </div>
 
-                <div className="flex gap-6 items-start group">
-                  <div className="w-12 h-12 rounded-sm bg-primary/5 border border-accent/30 flex items-center justify-center text-accent group-hover:bg-primary transition-colors flex-shrink-0">
-                    <Phone size={20} />
-                  </div>
-                  <div>
-                    <h4 className="text-xs font-bold uppercase tracking-widest text-dark/50 mb-2">Contact Number</h4>
-                    <p className="text-primary font-bold text-lg">+91 - 9871500770</p>
-                  </div>
-                </div>
-
-                <div className="flex gap-6 items-start group">
-                  <div className="w-12 h-12 rounded-sm bg-primary/5 border border-accent/30 flex items-center justify-center text-accent group-hover:bg-primary transition-colors flex-shrink-0">
-                    <Globe size={20} />
-                  </div>
-                  <div>
-                    <h4 className="text-xs font-bold uppercase tracking-widest text-dark/50 mb-2">Website</h4>
-                    <a href="https://www.shanviglobal.com" className="text-primary font-bold text-lg hover:text-accent transition-colors break-all">www.shanviglobal.com</a>
-                  </div>
-                </div>
-
-                <div className="flex gap-6 items-start group">
-                  <div className="w-12 h-12 rounded-sm bg-primary/5 border border-accent/30 flex items-center justify-center text-accent group-hover:bg-primary transition-colors flex-shrink-0">
-                    <Mail size={20} />
-                  </div>
-                  <div className="w-full overflow-hidden">
-                    <h4 className="text-xs font-bold uppercase tracking-widest text-dark/50 mb-2">Email Address</h4>
-                    <div className="space-y-2">
-                      <a href="mailto:hiring@shanviglobal.com" className="block text-primary font-bold text-base md:text-lg hover:text-accent transition-colors break-all">hiring@shanviglobal.com</a>
-                      <a href="mailto:anupama@shanviglobal.com" className="block text-primary font-bold text-base md:text-lg hover:text-accent transition-colors break-all">anupama@shanviglobal.com</a>
+                <div className="space-y-8">
+                  <motion.div 
+                    whileHover={{ scale: 1.02 }}
+                    className="flex gap-6 items-start group bg-light p-6 border border-primary/5 shadow-sm hover:shadow-[0_15px_30px_rgba(198,161,91,0.15)] transition-all duration-300 rounded-sm relative overflow-hidden"
+                  >
+                    <div className="absolute left-0 top-0 bottom-0 w-1 bg-accent transform scale-y-0 group-hover:scale-y-100 transition-transform duration-300 origin-top" />
+                    <div className="w-14 h-14 rounded-full bg-white border border-accent/30 flex items-center justify-center text-accent group-hover:bg-primary group-hover:text-accent transition-colors flex-shrink-0 shadow-sm relative z-10">
+                      <Phone size={24} />
                     </div>
-                  </div>
-                </div>
+                    <div className="relative z-10">
+                      <h4 className="text-xs font-bold uppercase tracking-widest text-dark/50 mb-2">Contact Number</h4>
+                      <p className="text-primary font-bold text-xl group-hover:text-accent transition-colors">+91 - 9871500770</p>
+                    </div>
+                  </motion.div>
 
-                <div className="flex gap-6 items-start group">
-                  <div className="w-12 h-12 rounded-sm bg-primary/5 border border-accent/30 flex items-center justify-center text-accent group-hover:bg-primary transition-colors flex-shrink-0">
-                    <MapPin size={20} />
-                  </div>
-                  <div>
-                    <h4 className="text-xs font-bold uppercase tracking-widest text-dark/50 mb-2">Address</h4>
-                    <div className="space-y-6">
-                      <div>
-                        <p className="text-primary font-bold text-sm mb-1">Gurgaon Office:</p>
-                        <p className="text-dark/70 font-light">704, 7th Floor, MG Road, Palm Court<br/>Sector 16, Gurgaon, Haryana, 122007</p>
-                      </div>
-                      <div>
-                        <p className="text-primary font-bold text-sm mb-1">Kolkata Office:</p>
-                        <p className="text-dark/70 font-light">301-B, Shanvi House, Genexx Valley,<br/>Joka, Kolkata, WB, 702301</p>
+                  <motion.div 
+                    whileHover={{ scale: 1.02 }}
+                    className="flex gap-6 items-start group bg-light p-6 border border-primary/5 shadow-sm hover:shadow-[0_15px_30px_rgba(198,161,91,0.15)] transition-all duration-300 rounded-sm relative overflow-hidden"
+                  >
+                    <div className="absolute left-0 top-0 bottom-0 w-1 bg-accent transform scale-y-0 group-hover:scale-y-100 transition-transform duration-300 origin-top" />
+                    <div className="w-14 h-14 rounded-full bg-white border border-accent/30 flex items-center justify-center text-accent group-hover:bg-primary group-hover:text-accent transition-colors flex-shrink-0 shadow-sm relative z-10">
+                      <Globe size={24} />
+                    </div>
+                    <div className="relative z-10">
+                      <h4 className="text-xs font-bold uppercase tracking-widest text-dark/50 mb-2">Website</h4>
+                      <a href="https://www.shanviglobal.com" className="text-primary font-bold text-xl hover:text-accent transition-colors break-all">www.shanviglobal.com</a>
+                    </div>
+                  </motion.div>
+
+                  <motion.div 
+                    whileHover={{ scale: 1.02 }}
+                    className="flex gap-6 items-start group bg-light p-6 border border-primary/5 shadow-sm hover:shadow-[0_15px_30px_rgba(198,161,91,0.15)] transition-all duration-300 rounded-sm relative overflow-hidden"
+                  >
+                    <div className="absolute left-0 top-0 bottom-0 w-1 bg-accent transform scale-y-0 group-hover:scale-y-100 transition-transform duration-300 origin-top" />
+                    <div className="w-14 h-14 rounded-full bg-white border border-accent/30 flex items-center justify-center text-accent group-hover:bg-primary group-hover:text-accent transition-colors flex-shrink-0 shadow-sm relative z-10">
+                      <Mail size={24} />
+                    </div>
+                    <div className="w-full overflow-hidden relative z-10">
+                      <h4 className="text-xs font-bold uppercase tracking-widest text-dark/50 mb-2">Email Address</h4>
+                      <div className="space-y-3 mt-3">
+                        <a href="mailto:hiring@shanviglobal.com" className="flex items-center gap-2 text-primary font-bold text-lg hover:text-accent transition-colors break-all">
+                          <div className="w-2 h-2 rounded-full bg-accent/50" />
+                          hiring@shanviglobal.com
+                        </a>
+                        <a href="mailto:anupama@shanviglobal.com" className="flex items-center gap-2 text-primary font-bold text-lg hover:text-accent transition-colors break-all">
+                          <div className="w-2 h-2 rounded-full bg-accent/50" />
+                          anupama@shanviglobal.com
+                        </a>
                       </div>
                     </div>
-                  </div>
+                  </motion.div>
+
+                  <motion.div 
+                    whileHover={{ scale: 1.02 }}
+                    className="flex gap-6 items-start group bg-light p-6 border border-primary/5 shadow-sm hover:shadow-[0_15px_30px_rgba(198,161,91,0.15)] transition-all duration-300 rounded-sm relative overflow-hidden"
+                  >
+                    <div className="absolute left-0 top-0 bottom-0 w-1 bg-accent transform scale-y-0 group-hover:scale-y-100 transition-transform duration-300 origin-top" />
+                    <div className="w-14 h-14 rounded-full bg-white border border-accent/30 flex items-center justify-center text-accent group-hover:bg-primary group-hover:text-accent transition-colors flex-shrink-0 shadow-sm relative z-10">
+                      <MapPin size={24} />
+                    </div>
+                    <div className="relative z-10">
+                      <h4 className="text-xs font-bold uppercase tracking-widest text-dark/50 mb-4">Address</h4>
+                      <div className="space-y-6">
+                        <div className="bg-white p-4 border border-primary/5 rounded-sm">
+                          <p className="text-primary font-bold text-sm mb-2 flex items-center gap-2">
+                            <span className="w-1.5 h-1.5 rounded-full bg-accent block" /> Gurgaon Office
+                          </p>
+                          <p className="text-dark/70 font-light text-sm">704, 7th Floor, MG Road, Palm Court<br/>Sector 16, Gurgaon, Haryana, 122007</p>
+                        </div>
+                        <div className="bg-white p-4 border border-primary/5 rounded-sm">
+                          <p className="text-primary font-bold text-sm mb-2 flex items-center gap-2">
+                            <span className="w-1.5 h-1.5 rounded-full bg-accent block" /> Kolkata Office
+                          </p>
+                          <p className="text-dark/70 font-light text-sm">301-B, Shanvi House, Genexx Valley,<br/>Joka, Kolkata, WB, 702301</p>
+                        </div>
+                      </div>
+                    </div>
+                  </motion.div>
                 </div>
               </motion.div>
             </div>
@@ -119,47 +149,53 @@ export default function Contact() {
                 whileInView={{ opacity: 1, rotateY: 0, x: 0 }} 
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, ease: "easeOut" }}
-                className="bg-white p-8 sm:p-10 lg:p-16 shadow-[0_20px_50px_rgba(36,16,24,0.1)] border border-primary/5 relative"
+                className="bg-primary text-light p-10 sm:p-14 lg:p-16 shadow-[0_30px_60px_rgba(0,0,0,0.3)] relative overflow-hidden rounded-sm"
               >
                 {/* Decorative Elements */}
-                <div className="absolute top-0 right-0 w-2 h-32 bg-accent" />
-                <div className="absolute bottom-0 left-0 w-32 h-2 bg-primary" />
+                <div className="absolute top-0 right-0 w-32 h-32 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10" />
+                <div className="absolute top-0 right-0 w-2 h-48 bg-accent shadow-[0_0_15px_rgba(198,161,91,0.5)]" />
+                <div className="absolute bottom-0 left-0 w-48 h-2 bg-accent shadow-[0_0_15px_rgba(198,161,91,0.5)]" />
                 
-                <h2 className="text-3xl font-serif font-bold text-primary mb-10">Send Us A Message</h2>
+                <h2 className="text-4xl font-serif font-bold mb-10 relative z-10 text-white">Send Us A Message</h2>
                 
                 {isSubmitted ? (
                   <motion.div 
                     initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }}
-                    className="p-8 bg-green-50 border border-green-200 text-green-800 flex flex-col items-center justify-center text-center space-y-4"
+                    className="p-10 bg-white/5 backdrop-blur-md border border-accent/30 text-white flex flex-col items-center justify-center text-center space-y-6 relative z-10"
                   >
-                    <CheckCircle size={48} className="text-green-500" />
+                    <div className="w-20 h-20 bg-accent/20 rounded-full flex items-center justify-center">
+                      <CheckCircle size={40} className="text-accent" />
+                    </div>
                     <div>
-                      <h4 className="text-xl font-bold mb-2">Message Sent Successfully!</h4>
-                      <p className="text-sm">Thank you for reaching out to Shanvi Global. We will get back to you shortly.</p>
+                      <h4 className="text-2xl font-serif font-bold mb-3 text-accent">Message Sent Successfully!</h4>
+                      <p className="text-light/70 font-light">Thank you for reaching out to Shanvi Global. We will get back to you shortly.</p>
                     </div>
                   </motion.div>
                 ) : (
-                  <form onSubmit={handleSubmit} className="space-y-8">
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
-                      <div>
-                        <label className="block text-xs font-bold uppercase tracking-widest text-dark/50 mb-2">Your Name</label>
-                        <input required type="text" className="w-full border-b border-primary/20 bg-transparent py-3 text-dark focus:outline-none focus:border-accent transition-colors" placeholder="Enter your full name" />
+                  <form onSubmit={handleSubmit} className="space-y-10 relative z-10">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-10">
+                      <div className="relative group">
+                        <label className="block text-xs font-bold uppercase tracking-widest text-accent mb-3">Your Name</label>
+                        <input required type="text" className="w-full border-b-2 border-white/10 bg-white/5 px-4 py-4 text-white focus:outline-none focus:border-accent focus:bg-white/10 transition-all placeholder:text-light/30 rounded-t-sm" placeholder="Enter your full name" />
                       </div>
-                      <div>
-                        <label className="block text-xs font-bold uppercase tracking-widest text-dark/50 mb-2">Your Email</label>
-                        <input required type="email" className="w-full border-b border-primary/20 bg-transparent py-3 text-dark focus:outline-none focus:border-accent transition-colors" placeholder="Enter your email address" />
+                      <div className="relative group">
+                        <label className="block text-xs font-bold uppercase tracking-widest text-accent mb-3">Your Email</label>
+                        <input required type="email" className="w-full border-b-2 border-white/10 bg-white/5 px-4 py-4 text-white focus:outline-none focus:border-accent focus:bg-white/10 transition-all placeholder:text-light/30 rounded-t-sm" placeholder="Enter your email address" />
                       </div>
                     </div>
-                    <div>
-                      <label className="block text-xs font-bold uppercase tracking-widest text-dark/50 mb-2">Subject</label>
-                      <input required type="text" className="w-full border-b border-primary/20 bg-transparent py-3 text-dark focus:outline-none focus:border-accent transition-colors" placeholder="How can we help?" />
+                    <div className="relative group">
+                      <label className="block text-xs font-bold uppercase tracking-widest text-accent mb-3">Subject</label>
+                      <input required type="text" className="w-full border-b-2 border-white/10 bg-white/5 px-4 py-4 text-white focus:outline-none focus:border-accent focus:bg-white/10 transition-all placeholder:text-light/30 rounded-t-sm" placeholder="How can we help?" />
                     </div>
-                    <div>
-                      <label className="block text-xs font-bold uppercase tracking-widest text-dark/50 mb-2">Message</label>
-                      <textarea required rows={4} className="w-full border-b border-primary/20 bg-transparent py-3 text-dark focus:outline-none focus:border-accent transition-colors resize-none" placeholder="Your message here..."></textarea>
+                    <div className="relative group">
+                      <label className="block text-xs font-bold uppercase tracking-widest text-accent mb-3">Message</label>
+                      <textarea required rows={5} className="w-full border-b-2 border-white/10 bg-white/5 px-4 py-4 text-white focus:outline-none focus:border-accent focus:bg-white/10 transition-all placeholder:text-light/30 resize-none rounded-t-sm" placeholder="Your message here..."></textarea>
                     </div>
-                    <button type="submit" className="px-10 py-5 bg-primary text-light font-bold uppercase tracking-widest text-sm hover:bg-accent hover:text-primary transition-all duration-300 shadow-lg w-full sm:w-auto">
-                      Send Message
+                    <button type="submit" className="group relative overflow-hidden px-12 py-5 bg-accent text-primary font-bold uppercase tracking-widest text-sm hover:shadow-[0_10px_30px_rgba(198,161,91,0.3)] transition-all duration-300 w-full sm:w-auto rounded-sm">
+                      <span className="relative z-10 flex items-center justify-center gap-3">
+                        Send Message <ChevronRight size={16} className="group-hover:translate-x-1 transition-transform" />
+                      </span>
+                      <div className="absolute inset-0 h-full w-0 bg-white transition-all duration-300 ease-out group-hover:w-full z-0" />
                     </button>
                   </form>
                 )}

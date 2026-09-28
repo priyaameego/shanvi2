@@ -22,7 +22,7 @@ export default function Career() {
               <div className="h-[2px] w-16 bg-accent"></div>
               <p className="text-accent tracking-[0.3em] uppercase font-bold text-xs">Opportunities</p>
             </div>
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-serif font-bold leading-tight">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-serif font-bold leading-tight break-words">
               Career Opportunities
             </h1>
           </motion.div>

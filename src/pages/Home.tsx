@@ -114,7 +114,7 @@ export default function Home() {
             </motion.div>
             
             <motion.div className="overflow-hidden mb-6 py-2">
-              <motion.h1 variants={itemVariants} className="text-5xl md:text-7xl lg:text-8xl font-serif font-bold text-light leading-[1.1] drop-shadow-2xl">
+              <motion.h1 variants={itemVariants} className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-serif font-bold text-light leading-[1.1] drop-shadow-2xl break-words">
                 We Create The <br />
                 <span className="relative inline-block">
                   <span className="relative z-10 italic text-transparent bg-clip-text bg-gradient-to-r from-accent via-[#F4E3C5] to-accent">Opportunities</span>
@@ -342,43 +342,47 @@ export default function Home() {
                 Latest Completed Assignments
               </motion.h2>
 
-              <div className="bg-white text-dark rounded-sm overflow-hidden shadow-2xl border border-white/10">
+              <div className="space-y-4">
                 {assignments.map((assignment, idx) => (
                   <motion.div 
                     key={idx}
                     initial={{ opacity: 0, x: -20 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
-                    transition={{ duration: 0.3, delay: idx * 0.1 }}
-                    className="border-b border-dark/10 last:border-0"
+                    transition={{ duration: 0.4, delay: idx * 0.15 }}
+                    className="group"
                   >
-                    <button 
-                      onClick={() => toggleAccordion(idx)}
-                      className="w-full flex items-center justify-between py-4 px-4 sm:py-6 sm:px-8 hover:bg-light transition-colors text-left group focus:outline-none"
-                    >
-                      <div className="flex items-center gap-3 sm:gap-4">
-                        <ChevronRight 
-                          size={18} 
-                          className={`text-accent flex-shrink-0 transition-transform duration-300 ${activeAccordion === idx ? 'rotate-90' : ''}`} 
-                        />
-                        <h3 className="text-base sm:text-lg font-serif font-bold text-primary group-hover:text-accent transition-colors">{assignment.title}</h3>
-                      </div>
-                    </button>
-                    <AnimatePresence>
-                      {activeAccordion === idx && (
-                        <motion.div
-                          initial={{ height: 0, opacity: 0 }}
-                          animate={{ height: "auto", opacity: 1 }}
-                          exit={{ height: 0, opacity: 0 }}
-                          transition={{ duration: 0.3, ease: "easeInOut" }}
-                          className="overflow-hidden"
-                        >
-                          <div className="px-4 pb-4 sm:px-8 sm:pb-6 pl-10 sm:pl-14 text-dark/70 font-light text-xs sm:text-sm">
-                            {assignment.desc}
-                          </div>
-                        </motion.div>
-                      )}
-                    </AnimatePresence>
+                    <div className="bg-white/5 backdrop-blur-sm border border-white/10 hover:border-accent/40 rounded-sm shadow-sm hover:shadow-[0_10px_30px_rgba(198,161,91,0.15)] transition-all duration-500 overflow-hidden">
+                      <button 
+                        onClick={() => toggleAccordion(idx)}
+                        className="w-full flex items-center justify-between py-5 px-6 sm:px-8 hover:bg-white/5 transition-colors text-left focus:outline-none relative"
+                      >
+                        <div className="absolute left-0 top-0 bottom-0 w-1 bg-accent transform scale-y-0 group-hover:scale-y-100 transition-transform duration-500 origin-top" />
+                        <div className="flex items-center gap-4 sm:gap-6 w-full">
+                          <span className="text-accent/50 font-serif text-lg md:text-xl font-bold group-hover:text-accent transition-colors">0{idx + 1}</span>
+                          <h3 className="text-base sm:text-lg lg:text-xl font-serif font-bold text-light group-hover:text-accent transition-colors flex-1">{assignment.title}</h3>
+                          <ChevronRight 
+                            size={20} 
+                            className={`text-accent/70 flex-shrink-0 transition-transform duration-500 group-hover:text-accent ${activeAccordion === idx ? 'rotate-90' : ''}`} 
+                          />
+                        </div>
+                      </button>
+                      <AnimatePresence>
+                        {activeAccordion === idx && (
+                          <motion.div
+                            initial={{ height: 0, opacity: 0 }}
+                            animate={{ height: "auto", opacity: 1 }}
+                            exit={{ height: 0, opacity: 0 }}
+                            transition={{ duration: 0.4, ease: "easeInOut" }}
+                            className="overflow-hidden bg-primary/20"
+                          >
+                            <div className="px-6 pb-6 sm:px-8 sm:pb-8 pl-[4.5rem] sm:pl-20 text-light/70 font-light text-sm sm:text-base leading-relaxed border-t border-white/5 pt-4 mt-2">
+                              {assignment.desc}
+                            </div>
+                          </motion.div>
+                        )}
+                      </AnimatePresence>
+                    </div>
                   </motion.div>
                 ))}
               </div>
@@ -393,28 +397,59 @@ export default function Home() {
                 Testimonials
               </motion.h2>
 
-              <motion.div 
-                initial={{ opacity: 0, scale: 0.95 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6 }}
-                className="relative"
-              >
-                <div className="bg-[#EAEAEA] text-dark/80 p-8 italic font-serif leading-relaxed text-lg rounded-sm mb-8 relative shadow-lg">
-                  <p>"Lorem ipsum dolor met consectetur adipisicing. Aorem psum dolor met consectetur adipisicing sit amet, consectetur adipisicing elit, of them jean shorts sed magna aliqua. Lorem ipsum dolor met."</p>
-                  <div className="absolute -bottom-4 right-10 w-0 h-0 border-l-[15px] border-l-transparent border-t-[20px] border-t-[#EAEAEA] border-r-[15px] border-r-transparent"></div>
-                </div>
-                
-                <div className="flex items-center gap-6 pl-4">
-                  <div className="w-16 h-16 rounded-full overflow-hidden border-2 border-accent">
-                    <img src="https://images.unsplash.com/photo-1622564026438-11432858d4ac?auto=format&fit=crop&q=80&w=600" alt="Marc Cooper" className="w-full h-full object-cover" />
+              <div className="space-y-12">
+                <motion.div 
+                  initial={{ opacity: 0, scale: 0.95 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.8, ease: "easeOut" }}
+                  className="relative"
+                >
+                  <div className="absolute -top-8 -left-4 text-8xl text-accent/20 font-serif leading-none select-none z-0">"</div>
+                  <div className="bg-white/5 backdrop-blur-md border border-white/10 text-light p-8 font-serif leading-relaxed text-base rounded-sm mb-6 relative shadow-[0_20px_50px_rgba(0,0,0,0.3)] hover:shadow-[0_20px_50px_rgba(198,161,91,0.15)] transition-shadow duration-500 z-10 group">
+                    <p className="relative z-10 text-light/90 italic font-light group-hover:text-light transition-colors">
+                      Shanvi Global has been instrumental in fulfilling our critical talent needs. Their team's professionalism and rapid turnaround time have made them an invaluable partner.
+                    </p>
+                    <div className="absolute -bottom-4 right-10 w-0 h-0 border-l-[15px] border-l-transparent border-t-[20px] border-t-white/5 border-r-[15px] border-r-transparent group-hover:border-t-white/10 transition-colors duration-500"></div>
                   </div>
-                  <div>
-                    <h4 className="text-xl font-bold text-accent font-serif">Marc Cooper</h4>
-                    <p className="text-light/60 text-sm">Technical Director</p>
+                  
+                  <div className="flex items-center gap-5 pl-6 relative z-10">
+                    <div className="w-14 h-14 rounded-full overflow-hidden border-2 border-accent shadow-[0_0_15px_rgba(198,161,91,0.3)]">
+                      <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=400" alt="Marc Cooper" className="w-full h-full object-cover" />
+                    </div>
+                    <div>
+                      <h4 className="text-lg font-bold text-accent font-serif tracking-wide">Marc Cooper</h4>
+                      <p className="text-light/50 text-xs tracking-widest uppercase mt-1">Technical Director</p>
+                    </div>
                   </div>
-                </div>
-              </motion.div>
+                </motion.div>
+
+                <motion.div 
+                  initial={{ opacity: 0, scale: 0.95 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+                  className="relative"
+                >
+                  <div className="absolute -top-8 -left-4 text-8xl text-accent/20 font-serif leading-none select-none z-0">"</div>
+                  <div className="bg-white/5 backdrop-blur-md border border-white/10 text-light p-8 font-serif leading-relaxed text-base rounded-sm mb-6 relative shadow-[0_20px_50px_rgba(0,0,0,0.3)] hover:shadow-[0_20px_50px_rgba(198,161,91,0.15)] transition-shadow duration-500 z-10 group">
+                    <p className="relative z-10 text-light/90 italic font-light group-hover:text-light transition-colors">
+                      The candidates provided were exceptional. Shanvi Global truly understands the tech landscape and connected us with top-tier programming talent seamlessly.
+                    </p>
+                    <div className="absolute -bottom-4 right-10 w-0 h-0 border-l-[15px] border-l-transparent border-t-[20px] border-t-white/5 border-r-[15px] border-r-transparent group-hover:border-t-white/10 transition-colors duration-500"></div>
+                  </div>
+                  
+                  <div className="flex items-center gap-5 pl-6 relative z-10">
+                    <div className="w-14 h-14 rounded-full overflow-hidden border-2 border-accent shadow-[0_0_15px_rgba(198,161,91,0.3)]">
+                      <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=400" alt="Jennifer" className="w-full h-full object-cover" />
+                    </div>
+                    <div>
+                      <h4 className="text-lg font-bold text-accent font-serif tracking-wide">Jennifer</h4>
+                      <p className="text-light/50 text-xs tracking-widest uppercase mt-1">Programmer</p>
+                    </div>
+                  </div>
+                </motion.div>
+              </div>
             </div>
           </div>
         </div>
