@@ -4,11 +4,11 @@ import s1Logo from '../assets/s1.png';
 
 export default function Footer() {
   return (
-    <footer className="relative overflow-hidden bg-[#1a0b12] text-light pt-32 pb-12 z-10 border-t-4 border-accent">
+    <footer className="relative overflow-hidden bg-primary text-light pt-32 pb-12 z-10 border-t-4 border-accent">
       {/* Premium Background Elements */}
       <div className="absolute inset-0 z-0 pointer-events-none">
         <div className="absolute top-0 left-0 w-full h-full bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] opacity-[0.03]"></div>
-        <div className="absolute -top-[30%] -right-[10%] w-[60%] h-[120%] bg-primary rounded-full blur-[150px] opacity-20"></div>
+        <div className="absolute -top-[30%] -right-[10%] w-[60%] h-[120%] bg-secondary rounded-full blur-[150px] opacity-20"></div>
         <div className="absolute -bottom-[20%] -left-[10%] w-[40%] h-[80%] bg-accent rounded-full blur-[150px] opacity-10"></div>
         {/* Large watermark logo */}
         <div className="absolute -right-20 top-10 text-[30rem] font-serif font-black text-white/[0.02] leading-none select-none">
@@ -19,14 +19,14 @@ export default function Footer() {
       <div className="container relative z-10 mx-auto px-6 lg:px-12">
         
         {/* Top Info Banner */}
-        <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center p-6 sm:p-10 bg-gradient-to-r from-primary to-secondary border border-accent/20 mb-20 shadow-2xl relative group overflow-hidden">
+        <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center p-6 sm:p-10 bg-gradient-to-r from-secondary to-primary border border-accent/20 mb-20 shadow-2xl relative group overflow-hidden">
           <div className="absolute top-0 left-0 w-2 h-full bg-accent transition-all duration-500 group-hover:w-full group-hover:opacity-10 z-0"></div>
           <div className="relative z-10 lg:w-2/3 mb-6 lg:mb-0">
             <h3 className="text-2xl sm:text-3xl font-serif font-bold mb-2">Ready to transform your workforce?</h3>
             <p className="text-light/60 font-light text-sm sm:text-base">Partner with Delhi & Gurgaon's most trusted executive recruitment firm.</p>
           </div>
           <div className="relative z-10 w-full lg:w-auto">
-            <Link to="/contact" className="w-full lg:w-auto inline-flex items-center justify-center px-6 sm:px-10 py-4 bg-accent text-primary font-bold uppercase tracking-widest text-[10px] sm:text-xs hover:bg-[#D4C39B] transition-colors shadow-[0_0_20px_rgba(184,154,98,0.2)]">
+            <Link to="/contact" className="w-full lg:w-auto inline-flex items-center justify-center px-6 sm:px-10 py-4 bg-accent text-primary font-bold uppercase tracking-widest text-[10px] sm:text-xs hover:bg-accent/90 transition-colors shadow-[0_0_20px_rgba(212,175,55,0.2)]">
               Connect With Us <ChevronRight size={16} className="ml-2" />
             </Link>
           </div>

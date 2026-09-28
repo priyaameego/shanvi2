@@ -180,7 +180,7 @@ export default function AboutUs() {
                         whileInView={{ width: `${item.percent}%` }}
                         viewport={{ once: true }}
                         transition={{ duration: 1.5, ease: "easeOut", delay: 0.2 }}
-                        className="h-full bg-gradient-to-r from-[#D4C39B] to-accent rounded-full relative"
+                        className="h-full bg-gradient-to-r from-[#E2C275] to-accent rounded-full relative"
                       >
                         <div className="absolute top-0 right-0 bottom-0 w-4 bg-white/40 blur-[2px]"></div>
                       </motion.div>

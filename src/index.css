@@ -3,11 +3,17 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary: #35151F; /* Primary Burgundy */
-  --color-secondary: #241018; /* Deep Wine */
-  --color-accent: #B89A62; /* Champagne Gold */
-  --color-light: #F7F3EC; /* Warm Ivory */
-  --color-dark: #171416; /* Dark Text */
+  --color-primary: #5A2635; /* Primary Burgundy */
+  --color-secondary: #7A4050; /* Soft Burgundy */
+  --color-soft-burgundy: #7A4050; /* Soft Burgundy */
+  --color-accent: #C8A96B; /* Champagne Gold */
+  --color-gold: #C8A96B; /* Champagne Gold */
+  --color-gold-hover: #B89655; /* Rich Champagne Gold Hover */
+  --color-light: #FAF7F1; /* Warm Ivory */
+  --color-warm-ivory: #FAF7F1; /* Warm Ivory */
+  --color-dark: #2A2022; /* Dark Text */
+  --color-soft-beige: #EDE5DA; /* Soft Beige */
+  --color-beige: #EDE5DA; /* Soft Beige */
   
   --font-serif: "Playfair Display", serif;
   --font-sans: "Inter", sans-serif;

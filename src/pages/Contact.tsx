@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Phone, Mail, MapPin, Globe, CheckCircle } from 'lucide-react';
+import { Phone, Mail, MapPin, Globe, CheckCircle, ChevronRight } from 'lucide-react';
 import { useState } from 'react';
 
 export default function Contact() {

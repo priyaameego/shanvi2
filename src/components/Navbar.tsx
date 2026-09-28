@@ -61,7 +61,7 @@ export default function Navbar() {
             <div className="pl-6">
               <Link 
                 to="/contact"
-                className="relative inline-flex items-center justify-center px-8 py-3 bg-gradient-to-r from-accent to-[#D4C39B] text-primary font-bold text-xs tracking-widest uppercase overflow-hidden group shadow-[0_0_20px_rgba(184,154,98,0.2)] hover:shadow-[0_0_30px_rgba(184,154,98,0.5)] transition-all duration-500"
+                className="relative inline-flex items-center justify-center px-8 py-3 bg-gradient-to-r from-accent via-[#E2C275] to-accent text-primary font-bold text-xs tracking-widest uppercase overflow-hidden group shadow-[0_0_20px_rgba(212,175,55,0.2)] hover:shadow-[0_0_30px_rgba(212,175,55,0.5)] transition-all duration-500"
               >
                 <span className="absolute w-full h-full bg-light/20 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700 ease-in-out"></span>
                 <span className="relative z-10">Contact Us</span>

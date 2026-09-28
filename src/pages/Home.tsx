@@ -132,7 +132,7 @@ export default function Home() {
             </motion.div>
             
             <motion.div variants={itemVariants} className="flex flex-wrap gap-6 items-center">
-              <Link to="/aboutus" className="px-10 py-4 bg-accent text-primary hover:bg-[#D4C39B] transition-all duration-500 uppercase tracking-widest text-xs font-bold shadow-[0_0_20px_rgba(184,154,98,0.1)] hover:shadow-[0_0_30px_rgba(184,154,98,0.4)] backdrop-blur-sm">
+              <Link to="/aboutus" className="px-10 py-4 bg-accent text-primary hover:bg-accent/90 transition-all duration-500 uppercase tracking-widest text-xs font-bold shadow-[0_0_20px_rgba(212,175,55,0.2)] hover:shadow-[0_0_30px_rgba(212,175,55,0.5)] backdrop-blur-sm">
                 Read More
               </Link>
             </motion.div>
@@ -301,7 +301,7 @@ export default function Home() {
               </div>
               
               <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
-                <Link to="/aboutus" className="inline-block px-10 py-4 bg-accent text-primary hover:bg-[#D4C39B] transition-colors font-bold uppercase tracking-widest text-xs">
+                <Link to="/aboutus" className="inline-block px-10 py-4 bg-accent text-primary hover:bg-accent/90 transition-colors font-bold uppercase tracking-widest text-xs">
                   Learn More
                 </Link>
               </motion.div>
@@ -456,7 +456,7 @@ export default function Home() {
       </section>
 
       {/* 5. JOB SEEKERS / CLIENTS */}
-      <section className="py-24 bg-[#EAEAEA] relative z-10 overflow-hidden border-y border-dark/10">
+      <section className="py-24 bg-soft-beige relative z-10 overflow-hidden border-y border-dark/10">
         <div className="container mx-auto px-6 lg:px-12 relative z-10">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16">
             
@@ -476,11 +476,11 @@ export default function Home() {
               <h2 className="text-3xl sm:text-4xl font-serif font-bold text-light mt-8 mb-6">Job Seekers</h2>
               <p className="text-light/80 mb-10 font-light">Grow your career with us. Our experts helps you.</p>
               
-              <div className="flex flex-col xl:flex-row justify-center items-center gap-4 w-full">
-                <a href="http://careers.shanvistaffing.com/jobseeker/currentjobs" target="_blank" rel="noopener noreferrer" className="w-full xl:w-auto px-6 sm:px-8 py-4 bg-accent text-primary font-bold uppercase tracking-widest text-[10px] sm:text-xs hover:bg-[#D4C39B] transition-colors whitespace-nowrap">
+              <div className="flex flex-col sm:flex-row justify-center items-center gap-4 w-full max-w-md mx-auto">
+                <a href="http://careers.shanvistaffing.com/jobseeker/currentjobs" target="_blank" rel="noopener noreferrer" className="w-full sm:w-1/2 min-h-[48px] inline-flex items-center justify-center px-4 py-3.5 bg-accent text-primary font-bold uppercase tracking-widest text-xs hover:bg-accent/90 transition-all duration-300 text-center shadow-md hover:shadow-lg">
                   Current Jobs
                 </a>
-                <a href="http://careers.shanvistaffing.com/jobseeker/register" target="_blank" rel="noopener noreferrer" className="w-full xl:w-auto px-6 sm:px-8 py-4 bg-accent text-primary font-bold uppercase tracking-widest text-[10px] sm:text-xs hover:bg-[#D4C39B] transition-colors whitespace-nowrap">
+                <a href="http://careers.shanvistaffing.com/jobseeker/register" target="_blank" rel="noopener noreferrer" className="w-full sm:w-1/2 min-h-[48px] inline-flex items-center justify-center px-4 py-3.5 bg-accent text-primary font-bold uppercase tracking-widest text-xs hover:bg-accent/90 transition-all duration-300 text-center shadow-md hover:shadow-lg">
                   Register Now
                 </a>
               </div>
@@ -503,11 +503,11 @@ export default function Home() {
               <h2 className="text-3xl sm:text-4xl font-serif font-bold text-light mt-8 mb-6">Clients</h2>
               <p className="text-light/80 mb-10 font-light px-2">Inquire about our professional services & discuss what you require.</p>
               
-              <div className="flex flex-col xl:flex-row justify-center items-center gap-4 w-full">
-                <Link to="/ourservices" className="w-full xl:w-auto px-6 sm:px-8 py-4 bg-accent text-primary font-bold uppercase tracking-widest text-[10px] sm:text-xs hover:bg-[#D4C39B] transition-colors whitespace-nowrap">
+              <div className="flex flex-col sm:flex-row justify-center items-center gap-4 w-full max-w-md mx-auto">
+                <Link to="/ourservices" className="w-full sm:w-1/2 min-h-[48px] inline-flex items-center justify-center px-4 py-3.5 bg-accent text-primary font-bold uppercase tracking-widest text-xs hover:bg-accent/90 transition-all duration-300 text-center shadow-md hover:shadow-lg">
                   Services
                 </Link>
-                <Link to="/contact" className="w-full xl:w-auto px-6 sm:px-8 py-4 bg-accent text-primary font-bold uppercase tracking-widest text-[10px] sm:text-xs hover:bg-[#D4C39B] transition-colors whitespace-nowrap">
+                <Link to="/contact" className="w-full sm:w-1/2 min-h-[48px] inline-flex items-center justify-center px-4 py-3.5 bg-accent text-primary font-bold uppercase tracking-widest text-xs hover:bg-accent/90 transition-all duration-300 text-center shadow-md hover:shadow-lg">
                   Contact Us
                 </Link>
               </div>
