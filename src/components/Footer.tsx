@@ -1,6 +1,6 @@
 import { Link } from '@tanstack/react-router';
 import { Mail, Phone, MapPin, ChevronRight, Briefcase } from 'lucide-react';
-import s1Logo from '../assets/s1.png';
+import s1Logo from '../assets/ss.jpg';
 
 export default function Footer() {
   return (
@@ -36,11 +36,11 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-8 mb-20">
           
           <div className="lg:col-span-4 pr-0 lg:pr-10">
-            <div className="mb-8 overflow-hidden h-16 md:h-24 w-[180px] md:w-[220px] relative">
+            <div className="mb-8 h-16 md:h-24 w-[180px] md:w-[220px] relative">
               <img 
                 src={s1Logo} 
                 alt="Shanvi Global Logo" 
-                className="absolute inset-0 w-full h-full object-cover object-center"
+                className="w-full h-full object-contain object-left"
               />
             </div>
             <p className="text-light/50 leading-relaxed font-light text-sm mb-8">

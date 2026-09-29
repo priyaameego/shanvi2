@@ -158,7 +158,7 @@ export default function Home() {
       </section>
 
       {/* 2. SERVICES (Subtle 3D Floating) */}
-      <section className="py-32 bg-primary relative z-10 perspective-1000">
+      <section className="py-32 bg-light relative z-10 perspective-1000">
         <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] opacity-[0.03]"></div>
         
         <div className="container mx-auto px-6 lg:px-12 relative z-10">
@@ -166,7 +166,7 @@ export default function Home() {
             <div className="lg:w-1/2">
               <motion.h2 
                 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }}
-                className="text-5xl lg:text-6xl font-serif text-light font-bold leading-tight"
+                className="text-5xl lg:text-6xl font-serif text-primary font-bold leading-tight"
               >
                 OUR SERVICES
               </motion.h2>
@@ -174,7 +174,7 @@ export default function Home() {
             <div className="lg:w-1/2 flex items-end">
               <motion.div 
                 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.2 }}
-                className="text-lg text-light/70 font-light leading-relaxed border-l-2 border-accent/30 pl-8 space-y-2 text-left"
+                className="text-lg text-dark/70 font-light leading-relaxed border-l-2 border-accent/30 pl-8 space-y-2 text-left"
               >
                 <p>From our experience we have learned that every company has its own culture, values and expectations of its employees.</p>
                 <p>Our workforce spread over India has one mission to fulfill, to find the right people to meet our clients' specific requirements.</p>
@@ -195,18 +195,18 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0, rotateX: 0 }}
                 viewport={{ once: true, margin: "-100px" }}
                 transition={{ duration: 0.8, delay: index * 0.1, ease: "easeOut" }}
-                className="group relative p-10 bg-secondary/80 backdrop-blur-md border border-white/5 hover:border-accent/40 transition-all duration-700 hover:-translate-y-4 hover:shadow-[0_20px_40px_rgba(0,0,0,0.5)] overflow-hidden"
+                className="group relative p-10 bg-white shadow-xl backdrop-blur-md border border-primary/10 hover:border-accent/40 transition-all duration-700 hover:-translate-y-4 hover:shadow-[0_20px_40px_rgba(0,0,0,0.1)] overflow-hidden"
               >
                 <div className="absolute top-0 right-0 w-32 h-32 bg-accent/5 rounded-bl-full transform translate-x-10 -translate-y-10 group-hover:translate-x-0 group-hover:translate-y-0 transition-transform duration-700 ease-out z-0"></div>
                 
                 <div className="relative z-10">
-                  <div className="text-6xl font-serif text-white/5 mb-8 group-hover:text-accent/20 transition-colors duration-700">0{index + 1}</div>
-                  <div className="w-14 h-14 bg-primary border border-accent/20 flex items-center justify-center text-accent mb-8 shadow-inner group-hover:scale-110 transition-transform duration-500">
+                  <div className="text-6xl font-serif text-primary/5 mb-8 group-hover:text-accent/20 transition-colors duration-700">0{index + 1}</div>
+                  <div className="w-14 h-14 bg-primary/5 border border-accent/20 flex items-center justify-center text-accent mb-8 shadow-inner group-hover:scale-110 group-hover:bg-primary/10 transition-transform duration-500">
                     {service.icon}
                   </div>
-                  <h3 className="text-2xl font-serif font-bold text-light mb-4">{service.title}</h3>
+                  <h3 className="text-2xl font-serif font-bold text-primary mb-4">{service.title}</h3>
                   <div className="w-0 h-[1px] bg-accent group-hover:w-full transition-all duration-700 ease-out mb-6"></div>
-                  <Link to="/ourservices" className="inline-flex items-center text-xs font-bold uppercase tracking-widest text-light/50 group-hover:text-accent transition-colors">
+                  <Link to="/ourservices" className="inline-flex items-center text-xs font-bold uppercase tracking-widest text-dark/50 group-hover:text-accent transition-colors">
                     Explore <ChevronRight size={14} className="ml-1 opacity-0 group-hover:opacity-100 transform -translate-x-2 group-hover:translate-x-0 transition-all duration-500" />
                   </Link>
                 </div>
@@ -238,9 +238,9 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: idx * 0.1 }}
-                className="group p-8 bg-white border border-primary/5 hover:border-accent/30 hover:shadow-2xl transition-all duration-500 perspective-1000"
+                className="group p-8 bg-white border border-soft-beige hover:border-accent/50 hover:shadow-2xl transition-all duration-500 perspective-1000"
               >
-                <div className="w-16 h-16 bg-primary/5 border border-accent/20 flex items-center justify-center text-accent rounded-sm mb-6 group-hover:scale-110 group-hover:bg-primary transition-all duration-500">
+                <div className="w-16 h-16 bg-primary/5 border border-accent/20 flex items-center justify-center text-accent rounded-sm mb-6 group-hover:scale-110 group-hover:bg-primary/10 transition-all duration-500">
                   {reason.icon}
                 </div>
                 <h3 className="text-xl font-serif font-bold text-primary mb-4 group-hover:text-accent transition-colors">{reason.title}</h3>
@@ -328,7 +328,7 @@ export default function Home() {
       </section>
 
       {/* 4. LATEST ASSIGNMENTS & TESTIMONIALS */}
-      <section className="py-32 bg-secondary text-light relative z-10 border-t border-white/5">
+      <section className="py-32 bg-secondary text-light relative z-10 border-t border-soft-beige/20">
         <div className="container mx-auto px-6 lg:px-12">
           
           <div className="flex flex-col lg:flex-row gap-16 lg:gap-24">
@@ -352,7 +352,7 @@ export default function Home() {
                     transition={{ duration: 0.4, delay: idx * 0.15 }}
                     className="group"
                   >
-                    <div className="bg-white/5 backdrop-blur-sm border border-white/10 hover:border-accent/40 rounded-sm shadow-sm hover:shadow-[0_10px_30px_rgba(198,161,91,0.15)] transition-all duration-500 overflow-hidden">
+                    <div className="bg-white/5 backdrop-blur-sm border border-white/10 hover:border-accent/50 rounded-sm shadow-sm hover:shadow-[0_10px_30px_rgba(198,161,91,0.15)] transition-all duration-500 overflow-hidden">
                       <button 
                         onClick={() => toggleAccordion(idx)}
                         className="w-full flex items-center justify-between py-5 px-6 sm:px-8 hover:bg-white/5 transition-colors text-left focus:outline-none relative"
@@ -376,7 +376,7 @@ export default function Home() {
                             transition={{ duration: 0.4, ease: "easeInOut" }}
                             className="overflow-hidden bg-primary/20"
                           >
-                            <div className="px-6 pb-6 sm:px-8 sm:pb-8 pl-[4.5rem] sm:pl-20 text-light/70 font-light text-sm sm:text-base leading-relaxed border-t border-white/5 pt-4 mt-2">
+                            <div className="px-6 pb-6 sm:px-8 sm:pb-8 pl-[4.5rem] sm:pl-20 text-light/70 font-light text-sm sm:text-base leading-relaxed border-t border-white/10 pt-4 mt-2">
                               {assignment.desc}
                             </div>
                           </motion.div>
@@ -465,9 +465,9 @@ export default function Home() {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="bg-primary text-center p-8 sm:p-12 lg:p-16 relative shadow-[0_20px_50px_rgba(0,0,0,0.15)] group hover:-translate-y-2 transition-transform duration-500 mt-10 md:mt-0"
+              className="bg-primary border border-accent/20 text-center p-8 sm:p-12 lg:p-16 relative shadow-[0_20px_50px_rgba(0,0,0,0.15)] group hover:-translate-y-2 hover:shadow-2xl transition-all duration-500 mt-10 md:mt-0"
             >
-              <div className="absolute -top-10 left-1/2 -translate-x-1/2 w-20 h-20 bg-white shadow-xl flex items-center justify-center transform rotate-45 group-hover:rotate-0 transition-transform duration-500">
+              <div className="absolute -top-10 left-1/2 -translate-x-1/2 w-20 h-20 bg-light shadow-xl flex items-center justify-center transform rotate-45 group-hover:rotate-0 transition-transform duration-500">
                 <div className="transform -rotate-45 group-hover:rotate-0 transition-transform duration-500 text-primary">
                   <User size={32} />
                 </div>
@@ -477,10 +477,10 @@ export default function Home() {
               <p className="text-light/80 mb-10 font-light">Grow your career with us. Our experts helps you.</p>
               
               <div className="flex flex-col sm:flex-row justify-center items-center gap-4 w-full max-w-md mx-auto">
-                <a href="http://careers.shanvistaffing.com/jobseeker/currentjobs" target="_blank" rel="noopener noreferrer" className="w-full sm:w-1/2 min-h-[48px] inline-flex items-center justify-center px-4 py-3.5 bg-accent text-primary font-bold uppercase tracking-widest text-xs hover:bg-accent/90 transition-all duration-300 text-center shadow-md hover:shadow-lg">
+                <a href="http://careers.shanvistaffing.com/jobseeker/currentjobs" target="_blank" rel="noopener noreferrer" className="w-full sm:w-1/2 min-h-[48px] inline-flex items-center justify-center px-4 py-3.5 bg-accent text-primary font-bold uppercase tracking-widest text-xs hover:bg-gold-hover transition-all duration-300 text-center shadow-md hover:shadow-lg">
                   Current Jobs
                 </a>
-                <a href="http://careers.shanvistaffing.com/jobseeker/register" target="_blank" rel="noopener noreferrer" className="w-full sm:w-1/2 min-h-[48px] inline-flex items-center justify-center px-4 py-3.5 bg-accent text-primary font-bold uppercase tracking-widest text-xs hover:bg-accent/90 transition-all duration-300 text-center shadow-md hover:shadow-lg">
+                <a href="http://careers.shanvistaffing.com/jobseeker/register" target="_blank" rel="noopener noreferrer" className="w-full sm:w-1/2 min-h-[48px] inline-flex items-center justify-center px-4 py-3.5 bg-secondary text-light border border-accent/30 font-bold uppercase tracking-widest text-xs hover:bg-accent hover:text-primary hover:border-accent transition-all duration-300 text-center shadow-md hover:shadow-lg">
                   Register Now
                 </a>
               </div>
@@ -492,9 +492,9 @@ export default function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
-              className="bg-primary text-center p-8 sm:p-12 lg:p-16 relative shadow-[0_20px_50px_rgba(0,0,0,0.15)] group hover:-translate-y-2 transition-transform duration-500 mt-10 md:mt-0"
+              className="bg-primary border border-accent/20 text-center p-8 sm:p-12 lg:p-16 relative shadow-[0_20px_50px_rgba(0,0,0,0.15)] group hover:-translate-y-2 hover:shadow-2xl transition-all duration-500 mt-10 md:mt-0"
             >
-              <div className="absolute -top-10 left-1/2 -translate-x-1/2 w-20 h-20 bg-white shadow-xl flex items-center justify-center transform rotate-45 group-hover:rotate-0 transition-transform duration-500">
+              <div className="absolute -top-10 left-1/2 -translate-x-1/2 w-20 h-20 bg-light shadow-xl flex items-center justify-center transform rotate-45 group-hover:rotate-0 transition-transform duration-500">
                 <div className="transform -rotate-45 group-hover:rotate-0 transition-transform duration-500 text-primary">
                   <Building2 size={32} />
                 </div>
@@ -504,10 +504,10 @@ export default function Home() {
               <p className="text-light/80 mb-10 font-light px-2">Inquire about our professional services & discuss what you require.</p>
               
               <div className="flex flex-col sm:flex-row justify-center items-center gap-4 w-full max-w-md mx-auto">
-                <Link to="/ourservices" className="w-full sm:w-1/2 min-h-[48px] inline-flex items-center justify-center px-4 py-3.5 bg-accent text-primary font-bold uppercase tracking-widest text-xs hover:bg-accent/90 transition-all duration-300 text-center shadow-md hover:shadow-lg">
+                <Link to="/ourservices" className="w-full sm:w-1/2 min-h-[48px] inline-flex items-center justify-center px-4 py-3.5 bg-accent text-primary font-bold uppercase tracking-widest text-xs hover:bg-gold-hover transition-all duration-300 text-center shadow-md hover:shadow-lg">
                   Services
                 </Link>
-                <Link to="/contact" className="w-full sm:w-1/2 min-h-[48px] inline-flex items-center justify-center px-4 py-3.5 bg-accent text-primary font-bold uppercase tracking-widest text-xs hover:bg-accent/90 transition-all duration-300 text-center shadow-md hover:shadow-lg">
+                <Link to="/contact" className="w-full sm:w-1/2 min-h-[48px] inline-flex items-center justify-center px-4 py-3.5 bg-secondary text-light border border-accent/30 font-bold uppercase tracking-widest text-xs hover:bg-accent hover:text-primary hover:border-accent transition-all duration-300 text-center shadow-md hover:shadow-lg">
                   Contact Us
                 </Link>
               </div>

@@ -3,17 +3,17 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary: #5A2635; /* Primary Burgundy */
-  --color-secondary: #7A4050; /* Soft Burgundy */
-  --color-soft-burgundy: #7A4050; /* Soft Burgundy */
-  --color-accent: #C8A96B; /* Champagne Gold */
-  --color-gold: #C8A96B; /* Champagne Gold */
-  --color-gold-hover: #B89655; /* Rich Champagne Gold Hover */
-  --color-light: #FAF7F1; /* Warm Ivory */
-  --color-warm-ivory: #FAF7F1; /* Warm Ivory */
-  --color-dark: #2A2022; /* Dark Text */
-  --color-soft-beige: #EDE5DA; /* Soft Beige */
-  --color-beige: #EDE5DA; /* Soft Beige */
+  --color-primary: #002e5b; /* Navy Blue from live site */
+  --color-secondary: #2e8eda; /* Bright Blue from live site */
+  --color-soft-burgundy: #002e5b; /* Legacy var */
+  --color-accent: #fdd428; /* Yellow/Gold from live site */
+  --color-gold: #fdd428; /* Legacy var */
+  --color-gold-hover: #e5b900; /* Darker Yellow */
+  --color-light: #ffffff; /* White */
+  --color-warm-ivory: #ffffff; /* White (Legacy var) */
+  --color-dark: #222222; /* Dark Text */
+  --color-soft-beige: #f9f9f9; /* Light Gray */
+  --color-beige: #f9f9f9; /* Light Gray (Legacy var) */
   
   --font-serif: "Playfair Display", serif;
   --font-sans: "Inter", sans-serif;
